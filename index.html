@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mayank Sharma</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">
+			<img src="images/lobo3.png" class="rotating-logo" style="height: 100px;" >
+		  </a>
+		
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" ;">
+	          	 <div class="overlay"></div>
+	          	</div> 
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Mayank Sharma</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Talk me about ? ',
+						'Automation  ',
+						'Infrastructure as code ',
+						'cloud'
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>Passionate DevOps Engineer</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.linkedin.com/in/mayank-sharma-devops/" class="btn btn-primary py-3 px-4">LinkedIn</a> 
+							<a href="https://github.com/mayaworld13" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb about-pro" id="about-section">
+  <div class="container">
+    <div class="row d-flex align-items-stretch">
+
+      <!-- LEFT SIDE -->
+      <div class="col-md-6 col-lg-5 d-flex">
+        <div class="img-about d-flex align-items-stretch">
+          <div class="overlay p-4">
+
+            <div class="row align-items-center mb-4">
+              <div class="col-md-5">
+                <div class="about-img">
+                  <img src="images/mayank-about3.jpg" class="img-fluid rounded" alt="Mayank Sharma">
+                </div>
+              </div>
+
+              <div class="col-md-7">
+                <div class="about-info">
+                  <p><span>Name:</span> Mayank Sharma</p>
+                  <p><span>Role:</span> DevOps Engineer</p>
+                  <p><span>Experience:</span> 1.5+ Years</p>
+                  <p><span>Location:</span> Delhi, India</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- SKILLS -->
+            <div class="skill-mf">
+              <p class="title-s">Core Skills</p>
+
+              <span>Linux</span><span class="pull-right"> 95%</span>
+              <div class="progress"><div class="progress-bar" style="width:95%"></div></div>
+
+              <span>Docker</span><span class="pull-right"> 95%</span>
+              <div class="progress"><div class="progress-bar" style="width:95%"></div></div>
+
+              <span>Kubernetes</span><span class="pull-right"> 85%</span>
+              <div class="progress"><div class="progress-bar" style="width:85%"></div></div>
+
+              <span>Jenkins</span><span class="pull-right"> 90%</span>
+              <div class="progress"><div class="progress-bar" style="width:90%"></div></div>
+
+              <span>Terraform</span><span class="pull-right"> 85%</span>
+              <div class="progress"><div class="progress-bar" style="width:85%"></div></div>
+
+              <span>AWS / Azure / GCP</span><span class="pull-right"> 90%</span>
+              <div class="progress"><div class="progress-bar" style="width:90%"></div></div>
+
+              <span>Python & Bash</span><span class="pull-right"> 85%</span>
+              <div class="progress"><div class="progress-bar" style="width:85%"></div></div>
+
+              <!-- SKILL TAGS -->
+              <div class="skill-tags">
+                <span>GitHub Actions</span>
+                <span>GitLab CI/CD</span>
+                <span>Helm</span>
+                <span>Argo CD</span>
+                <span>SonarQube</span>
+                <span>Snyk</span>
+                <span>AWS WAF</span>
+                <span>ECS & Fargate</span>
+                <span>Elastic Beanstalk</span>
+                <span>GKE Autopilot</span>
+                <span>Cloud Build</span>
+                <span>Artifact Registry</span>
+                <span>Azure AVD</span>
+                <span>Azure Entra ID</span>
+                <span>IAM & RBAC</span>
+                <span>Prometheus</span>
+                <span>Grafana</span>
+                <span>Networking (VPC, VPN, CIDR)</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="col-md-6 col-lg-7 pl-lg-5">
+  <div class="heading-section">
+    <h1 class="big">About</h1>
+    <h2>About Me</h2>
+
+    <p class="mt-3">
+      Passionate <b>DevOps & Cloud Engineer</b> with 1.5+ years of hands-on experience
+      in designing, automating, and securing <b>cloud-native infrastructure</b>.
+      I specialize in building reliable CI/CD pipelines, containerized platforms,
+      and GitOps-driven deployments across <b>AWS, Azure, and GCP</b>.
+    </p>
+
+    <p>
+      I have a strong engineering mindset focused on <b>scalability, security,
+      cost optimization, and automation</b>. I enjoy solving complex infrastructure
+      problems and translating business requirements into robust cloud architectures.
+    </p>
+
+    <!-- INFO LIST -->
+    <ul class="about-list mt-4">
+      <li><b>Profile:</b> DevOps & Cloud Engineer</li>
+      <li><b>Domain:</b> CI/CD, Cloud Automation, GitOps, Microservices</li>
+      <li><b>Education:</b> B.Tech – Artificial Intelligence & Robotics</li>
+      <li><b>Languages:</b> English, Hindi</li>
+      <li><b>Interests:</b> Automation, Cloud Architecture, System Design</li>
+    </ul>
+
+    <!-- SKILL HIGHLIGHTS -->
+    <div class="mt-4">
+      <h5 class="text-white mb-3">Core Strengths</h5>
+      <div class="d-flex flex-wrap">
+    <span class="badge badge-dark p-2 mr-2 mb-2">AWS</span>
+    <span class="badge badge-dark p-2 mr-2 mb-2">Azure</span>
+    <span class="badge badge-dark p-2 mr-2 mb-2">GCP</span>
+    <span class="badge badge-dark p-2 mr-2 mb-2">Docker</span>
+    <span class="badge badge-dark p-2 mr-2 mb-2">Kubernetes</span>
+    <span class="badge badge-dark p-2 mr-2 mb-2">Terraform</span>
+    <span class="badge badge-dark p-2 mr-2 mb-2">GitHub Actions</span>
+    <span class="badge badge-dark p-2 mr-2 mb-2">Jenkins</span>
+    <span class="badge badge-dark p-2 mr-2 mb-2">Argo CD</span>
+    <span class="badge badge-dark p-2 mr-2 mb-2">Monitoring</span>
+  </div>
+    </div>
+
+    <!-- CAREER IMPACT -->
+    <div class="mt-4">
+      <p>
+         <b>Career Focus:</b> Building highly available, secure, and automated
+        cloud platforms that enable fast and reliable software delivery.
+      </p>
+    </div>
+
+    <!-- COUNTERS -->
+    <div class="counter-wrap mt-4 d-flex align-items-center">
+  
+  <div class="mr-4">
+    <p class="mb-0">
+      <span class="number">30+</span><br>
+      <span>Projects Delivered</span>
+    </p>
+  </div>
+
+  <div>
+    <p class="mb-0">
+      <span class="number">5+</span><br>
+      <span>Cloud Platforms</span>
+    </p>
+  </div>
+
+</div>
+
+
+    <!-- CTA -->
+    <div class="mt-4">
+      <a href="https://www.linkedin.com/in/mayank-sharma-devops/"
+         class="btn btn-primary mr-2">LinkedIn</a>
+      <a href="https://drive.google.com/file/d/193awoRk-xRx22GHs5X357Ngu2eFHxPrc/view"
+         class="btn btn-outline-light">View Resume</a>
+    </div>
+
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</section>
+
+
+	
+    <section class="resume-section" id="resume-section">
+  <div class="container">
+
+    <!-- Header -->
+    <div class="resume-header">
+      <h1 class="resume-bg">Resume</h1>
+      <h2>Professional Experience</h2>
+      <p>DevOps Engineer with 1.5+ years of experience in CI/CD, Cloud Infrastructure, and Kubernetes-driven platforms.</p>
+    </div>
+
+    <!-- Timeline -->
+    <div class="timeline">
+
+      <!-- Kshypy -->
+      <div class="timeline-item">
+        <span class="timeline-dot"></span>
+        <div class="timeline-content">
+          <span class="date">Aug 2025 – Present | Noida, UP</span>
+          <h3>DevOps Intern</h3>
+          <h4>Kshypy Cloud Services Pvt Ltd</h4>
+          <ul>
+            <li>Built CI/CD pipelines using <b>GitHub Actions</b> for Laravel apps, reducing deployment time by <b>40%</b>.</li>
+            <li>Integrated <b>SonarQube & Snyk</b>, fixing <b>20+ security and code quality issues</b> pre-production.</li>
+            <li>Configured <b>GCP VPCs, subnets, firewall rules & IAM</b> enforcing least-privilege access.</li>
+            <li>Designed <b>Site-to-Site VPN</b> between on-prem and Azure VNets with zero public exposure.</li>
+            <li>Managed <b>Azure Entra ID</b>, RBAC & deployed <b>Azure Virtual Desktop</b> supporting 20+ users.</li>
+            <li>Implemented <b>AWS WAF</b>, blocking OWASP attacks and reducing malicious traffic by <b>70%</b>.</li>
+            <li>Managed applications on <b>AWS Elastic Beanstalk</b> with auto-scaling and zero downtime.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- LinuxWorld -->
+      <div class="timeline-item">
+        <span class="timeline-dot"></span>
+        <div class="timeline-content">
+          <span class="date">2022 – 2023</span>
+          <h3>ARTH Trainee</h3>
+          <h4>LinuxWorld Informatics</h4>
+          <ul>
+            <li>Hands-on training across AWS, DevOps, Microservices & Cloud Automation.</li>
+            <li>Reduced deployment time by <b>40%</b> using Jenkins CI/CD pipelines.</li>
+            <li>Designed AWS ECS Fargate infrastructure using <b>Terraform (15+ resources)</b>.</li>
+            <li>Orchestrated Docker workloads with Docker Compose, reducing infra cost by <b>30%</b>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Internship -->
+      <div class="timeline-item">
+        <span class="timeline-dot"></span>
+        <div class="timeline-content">
+          <span class="date">Jul 2023 – Sep 2023</span>
+          <h3>Generative AIOps Intern</h3>
+          <h4>LinuxWorld (Onsite – Jaipur)</h4>
+          <ul>
+            <li>Worked on Generative AI, DevOps & Computer Vision projects.</li>
+            <li>Improved user experience leading to <b>70% fewer errors</b> and <b>80% engagement boost</b>.</li>
+            <li>Built multiple projects using Python, ML, DevOps & AI tools.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Education -->
+    <div class="resume-header mt-5">
+      <h2>Education</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-dot"></span>
+        <div class="timeline-content">
+          <span class="date">2021 – 2025</span>
+          <h3>B.Tech – Artificial Intelligence & Robotics</h3>
+          <h4>MITS Gwalior</h4>
+          <p>CGPA: 8.3</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <span class="timeline-dot"></span>
+        <div class="timeline-content">
+          <span class="date">2019 – 2020</span>
+          <h3>Higher Secondary</h3>
+          <h4>C.M.A School, Satna</h4>
+          <p>Grade: 90%</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="resume-cta mt-5">
+      <a href="https://drive.google.com/file/d/193awoRk-xRx22GHs5X357Ngu2eFHxPrc/view" class="btn btn-primary">Download Resume</a>
+    </div>
+
+  </div>
+</section>
+
+   
+
+    <section class="projects-section" id="project-section">
+  <div class="container">
+    <div class="section-header text-center">
+      <h1 class="big">Projects</h1>
+      <h2>Production-Grade DevOps Projects</h2>
+      <p>End-to-end CI/CD, GitOps, Cloud & Infrastructure Automation</p>
+    </div>
+
+    <div class="project-grid">
+
+      <!-- MERN CI/CD -->
+      <div class="project-card">
+        <img src="images/project1.png" alt="MERN CI/CD">
+        <div class="project-content">
+          <h3>MERN App – CI/CD with Docker & Jenkins</h3>
+          <p>Automated build & deployment using Jenkins pipelines and GitHub Webhooks, reducing manual effort by <b>60%</b>. Containerized 3 independent services using Docker Compose with secure internal networking.</p>
+          <div class="tech-stack">
+            <span>AWS</span><span>Docker</span><span>Jenkins</span><span>GitHub</span><span>Shell Scripting</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mayaworld13/Three_tier_blogging_website_deployment.git" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jenkins GitOps Azure -->
+      <div class="project-card">
+        <img src="images/project2.png" alt="Jenkins GitOps">
+        <div class="project-content">
+          <h3>Jenkins CI/CD & GitOps – Spring Boot on Kubernetes</h3>
+          <p>Designed an <b>8-stage Jenkins pipeline</b> integrating Maven, SonarQube, Docker, Helm & Argo CD, reducing deployment inconsistencies by <b>70%</b>.</p>
+          <div class="tech-stack">
+            <span>Azure</span><span>Jenkins</span><span>K8s</span><span>Helm</span><span>Argo CD</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mayaworld13/Java-maven-jenkins-argocd.git" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Terraform ECS -->
+      <div class="project-card">
+        <img src="images/project3.png" alt="Terraform ECS">
+        <div class="project-content">
+          <h3>Terraform AWS ECS with Application Load Balancer</h3>
+          <p>Provisioned scalable ECS Fargate infrastructure managing <b>15+ AWS resources</b>. Integrated ALB handling <b>500+ concurrent requests</b> with high availability.</p>
+          <div class="tech-stack">
+            <span>Terraform</span><span>AWS</span><span>ECS</span><span>Fargate</span><span>ALB</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mayaworld13/terraform-loadbalance-ECS.git" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- GKE GitOps -->
+      <div class="project-card">
+        <img src="images/project4.png" alt="GKE GitOps">
+        <div class="project-content">
+          <h3>Flask CI/CD & GitOps on GKE (Autopilot)</h3>
+          <p>Built end-to-end GitOps pipeline using Terraform, Cloud Build, Helm & Argo CD. Reduced deployment effort by <b>90%</b> with auto-sync and instant rollbacks.</p>
+          <div class="tech-stack">
+            <span>GCP</span><span>GKE</span><span>Terraform</span><span>Cloud Build</span><span>Argo CD</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mayaworld13/python-gcp.git" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- AWS Transit Gateway -->
+      <div class="project-card">
+        <img src="images/project5.png" alt="AWS Transit Gateway">
+        <div class="project-content">
+          <h3>AWS Transit Gateway – Multi-VPC Architecture</h3>
+          <p>Designed centralized Transit Gateway connecting <b>3 isolated VPCs</b>. Eliminated VPC peering, enabling <b>100% private connectivity</b>.</p>
+          <div class="tech-stack">
+            <span>AWS</span><span>Transit Gateway</span><span>VPC</span><span>EC2</span><span>CloudWatch</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mayaworld13/transit-gateway-aws.git" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="images/livedocker.jpeg" alt="Live Streaming Inside Docker">
+        <div class="project-content">
+          <h3>Live Streaming Inside Docker</h3>
+          <p>Designed and implemented a Dockerized live video streaming application that accesses the host machine’s camera hardware directly from inside a container.</p>
+          <div class="tech-stack">
+            <span>Docker</span><span>Linux (RHEL 9)</span><span>Python</span><span>X11</span><span>Docker Hub</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mayaworld13/livestream-insidedocker.git" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <a href="https://github.com/mayaworld13?tab=repositories" class="btn btn-primary">View All Projects on GitHub</a>
+    </div>
+  </div>
+</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+  <div class="container">
+    <div class="row justify-content-center mb-5 pb-3">
+      <div class="col-md-7 heading-section text-center ftco-animate">
+        <h1 class="big big-2">Contact</h1>
+        <h2 class="mb-4">Contact Me</h2>
+        <p>Below are the details to reach out to me!</p>
+      </div>
+    </div>
+
+    <div class="background">
+      <div class="container1">
+        <div class="screen">
+          <div class="screen-header">
+            <div class="screen-header-left">
+              <div class="screen-header-button close"></div>
+              <div class="screen-header-button maximize"></div>
+              <div class="screen-header-button minimize"></div>
+            </div>
+          </div>
+
+          <div class="screen-body">
+            <div class="screen-body-item left">
+              <div class="app-title">
+                <span>Let's Have</span>
+                <span>a Talk</span>
+                <img src="images/mayank1.png" style="height:300px">
+              </div>
+              <div class="app-contact">CONTACT INFO : +91 6265118967</div>
+            </div>
+
+            <!-- ✅ FORM START -->
+            <div class="screen-body-item">
+              <form id="contactForm" class="app-form">
+
+                <div class="app-form-group">
+                  <input class="app-form-control" name="name" placeholder="NAME" required>
+                </div>
+
+                <div class="app-form-group">
+                  <input class="app-form-control" name="email" placeholder="EMAIL" required>
+                </div>
+
+                <div class="app-form-group">
+                  <input id="contact-number" class="app-form-control" name="phone" placeholder="CONTACT NO" required>
+
+                </div>
+
+                <div class="app-form-group message">
+                  <input class="app-form-control" name="message" placeholder="MESSAGE" required>
+                </div>
+
+                <div class="app-form-group buttons">
+                  <button type="reset" class="app-form-button">CANCEL</button>
+                  <button type="submit" class="app-form-button">SEND</button>
+                </div>
+                <div class="credits">
+						<a class="navbar-brand" href="index.html">
+							<img src="images/lobo3.png" style="height: 100px; " >
+						</a>
+				</div>
+              </form>
+            </div>
+			
+            <!-- ✅ FORM END -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Delhi, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+916265118967</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">mayankkdevops@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="https://drive.google.com/file/d/193awoRk-xRx22GHs5X357Ngu2eFHxPrc/view">resumelink</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://medium.com/@mayank07082001"><span class="icon-medium"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/mayank-sharma-devops/"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://github.com/mayaworld13"><span class="icon-github"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.facebook.com/veeru.sharma.921025"><span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href="https://www.instagram.com/_mayank__dwivedi/"><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+</section>
+
+
+
+ 
+	
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+  <!-- ✅ Phone number formatter (+91) -->
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const phone = document.getElementById('contact-number');
+  if (!phone) return;
+
+  phone.value = "+91";
+
+  phone.addEventListener('input', function () {
+    const numbers = this.value.replace(/\D/g, '');
+    this.value = numbers.startsWith("91") ? "+" + numbers : "+91" + numbers;
+  });
+
+  phone.addEventListener('keydown', function (e) {
+    if (e.key === 'Backspace' && this.selectionStart <= 3) {
+      e.preventDefault();
+      this.value = "+91";
+    }
+  });
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contactForm");
+  if (!form) return;
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      message: form.message.value
+    };
+
+    try {
+      const response = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        alert("✅ Message sent successfully!");
+        form.reset();
+        document.getElementById("contact-number").value = "+91";
+      } else {
+        alert("❌ Failed to send message");
+      }
+    } catch (err) {
+      alert("❌ Server error");
+      console.error(err);
+    }
+  });
+});
+</script>
+
+	
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
