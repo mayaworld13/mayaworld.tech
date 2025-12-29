@@ -160,7 +160,7 @@
 						<script>
 
 						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation');
+						var typingAnimationElement = document.getElementById('typing-animation');
 
 						// Create an array of typing text
 						const typingTexts = [
@@ -351,7 +351,7 @@
 
   <div>
     <p class="mb-0">
-      <span class="number">5+</span><br>
+      <span class="number">3+</span><br>
       <span>Cloud Platforms</span>
     </p>
   </div>
@@ -639,8 +639,9 @@
 
                 <div class="app-form-group buttons">
                   <button type="reset" class="app-form-button">CANCEL</button>
-                  <button type="submit" class="app-form-button">SEND</button>
+                  <button type="submit" id="sendBtn" class="app-form-button">SEND</button>
                 </div>
+		<p id="formStatus" style="margin-top:10px;"></p>
                 <div class="credits">
 						<a class="navbar-brand" href="index.html">
 							<img src="images/lobo3.png" style="height: 100px; " >
@@ -753,10 +754,18 @@ document.addEventListener('DOMContentLoaded', function () {
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("contactForm");
+  const sendBtn = document.getElementById("sendBtn");
+  const status = document.getElementById("formStatus");
+
   if (!form) return;
 
   form.addEventListener("submit", async function (e) {
     e.preventDefault();
+
+    // instant UI feedback
+    sendBtn.disabled = true;
+    sendBtn.innerText = "Sending...";
+    status.innerText = "";
 
     const data = {
       name: form.name.value,
@@ -766,7 +775,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/api/contact", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
@@ -775,19 +784,23 @@ document.addEventListener("DOMContentLoaded", function () {
       const result = await response.json();
 
       if (result.success) {
-        alert("✅ Message sent successfully!");
+        status.innerText = " Message sent successfully!";
         form.reset();
         document.getElementById("contact-number").value = "+91";
       } else {
-        alert("❌ Failed to send message");
+        status.innerText = "❌ Failed to send message";
       }
     } catch (err) {
-      alert("❌ Server error");
       console.error(err);
+      status.innerText = "❌ Server error";
     }
+
+    sendBtn.disabled = false;
+    sendBtn.innerText = "SEND";
   });
 });
 </script>
+
 
 	
   <script src="js/jquery.min.js"></script>
